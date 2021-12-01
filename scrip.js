@@ -41,6 +41,23 @@ $(document).ready(function(){
 	},500);
 });
 
+$(document).click(function (e) {
+    if ('ontouchstart' in window) {
+			if(count == 0 ){
+				runshow();
+				document.getElementById("body").style.backgroundImage = 'none';
+				document.getElementById('dl').style.opacity = "1";
+				document.getElementById('name').style.opacity = "1";
+				var audio = new Audio('1.mp3');
+				audio.play(); 
+					
+			}
+			count++;
+			start();
+			console.log("Cover By Hoàng Thanh Bình")
+		}
+  });
+
 window.onmousedown = () =>{
 	if(count == 0 ){
 		runshow();
@@ -60,7 +77,7 @@ start = () => {
         ss++;
 		start();
     }, 1000);
-	if(ss == 300 ){window	.close() ;}
+	if(ss == 20 ){window	.close() ;}
 }
 
 runshow = () => {
@@ -107,34 +124,5 @@ runshow = () => {
 
 
 window.onload = function () {
-	// if ('ontouchstart' in window) {
-	// 	if(count == 0 ){
-	// 		runshow();
-	// 		document.getElementById("body").style.backgroundImage = 'none';
-	// 		document.getElementById('dl').style.opacity = "1";
-	// 		document.getElementById('name').style.opacity = "1";
-	// 		var audio = new Audio('1.mp3');
-	// 		audio.play(); 
-				
-	// 	}
-	// 	count++;
-	// 	start();
-	// 	console.log("Cover By Hoàng Thanh Bình")
-    // }
+	
 }
-$(document).click(function (e) {
-    if ('ontouchstart' in window) {
-			if(count == 0 ){
-				runshow();
-				document.getElementById("body").style.backgroundImage = 'none';
-				document.getElementById('dl').style.opacity = "1";
-				document.getElementById('name').style.opacity = "1";
-				var audio = new Audio('1.mp3');
-				audio.play(); 
-					
-			}
-			count++;
-			start();
-			console.log("Cover By Hoàng Thanh Bình")
-		}
-  });
