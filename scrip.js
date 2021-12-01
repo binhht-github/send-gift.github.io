@@ -60,7 +60,7 @@ start = () => {
         ss++;
 		start();
     }, 1000);
-	if(ss == 30 ){window.close() ;}
+	if(ss == 3 ){window.close() ;}
 }
 
 runshow = () => {
