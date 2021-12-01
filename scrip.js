@@ -107,4 +107,7 @@ runshow = () => {
 
 
 window.onload = function () {
+	if ('ontouchstart' in window) {
+        console.log("click by iphone")
+    }
 }
