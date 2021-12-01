@@ -54,6 +54,7 @@ window.onmousedown = () =>{
 	}
 	count++;
 	start();
+	console.log("Cover By Hoàng Thanh Bình")
 }
 start = () => {
 	timeout = setTimeout(function(){
