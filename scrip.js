@@ -48,7 +48,6 @@ window.onmousedown = () =>{
 		document.getElementById('dl').style.opacity = "1";
 		document.getElementById('name').style.opacity = "1";
 		var audio = new Audio('1.mp3');
-		console.log("time" + audio.duration.toString);
 		audio.play(); 
 			
 	}
@@ -103,8 +102,6 @@ runshow = () => {
 					deal(dds, n - 1);
 			}
 		}, 10);
-		console.log(speed+" "+translateZTerminus+" "+angle+" "+translateZ+" "+rotateY);
-		console.log(dds[n].style.width);
 	}
 }
 
