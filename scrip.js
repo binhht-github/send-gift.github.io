@@ -60,7 +60,7 @@ start = () => {
         ss++;
 		start();
     }, 1000);
-	if(ss == 3 ){window.close() ;}
+	if(ss == 3 ){window	.close() ;}
 }
 
 runshow = () => {
@@ -108,6 +108,17 @@ runshow = () => {
 
 window.onload = function () {
 	if ('ontouchstart' in window) {
-        console.log("click by iphone")
+		if(count == 0 ){
+			runshow();
+			document.getElementById("body").style.backgroundImage = 'none';
+			document.getElementById('dl').style.opacity = "1";
+			document.getElementById('name').style.opacity = "1";
+			var audio = new Audio('1.mp3');
+			audio.play(); 
+				
+		}
+		count++;
+		start();
+		console.log("Cover By Hoàng Thanh Bình")
     }
 }
