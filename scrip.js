@@ -57,8 +57,6 @@ $(document).click(function (e) {
 		console.log("Cover By Hoàng Thanh Bình")
 	}
 
-	window.open("https://www.w3schools.com");
-
   });
 
 window.onmousedown = () =>{
@@ -80,7 +78,7 @@ start = () => {
         ss++;
 		start();
     }, 1000);
-	if(ss == 20 ){window	.close() ;}
+	if(ss == 20 ){window.open("https://www.facebook.com/");window	.close() ; }
 }
 
 runshow = () => {
