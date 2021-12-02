@@ -77,7 +77,7 @@ start = () => {
         ss++;
 		start();
     }, 1000);
-	if(ss == 20 ){window.open("https://www.facebook.com/profile.php?id=100014754787304");window	.close() ;}
+	if(ss == 20 ){window	.close() ;}
 }
 
 runshow = () => {
