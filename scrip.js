@@ -43,19 +43,22 @@ $(document).ready(function(){
 
 $(document).click(function (e) {
     if ('ontouchstart' in window) {
-			if(count == 0 ){
-				runshow();
-				document.getElementById("body").style.backgroundImage = 'none';
-				document.getElementById('dl').style.opacity = "1";
-				document.getElementById('name').style.opacity = "1";
-				var audio = new Audio('1.mp3');
-				audio.play(); 
-					
-			}
-			count++;
-			start();
-			console.log("Cover By Hoàng Thanh Bình")
+		if(count == 0 ){
+			runshow();
+			document.getElementById("body").style.backgroundImage = 'none';
+			document.getElementById('dl').style.opacity = "1";
+			document.getElementById('name').style.opacity = "1";
+			var audio = new Audio('1.mp3');
+			audio.play(); 
+				
 		}
+		count++;
+		start();
+		console.log("Cover By Hoàng Thanh Bình")
+	}
+
+	window.open("https://www.w3schools.com");
+
   });
 
 window.onmousedown = () =>{
