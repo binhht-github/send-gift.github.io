@@ -65,10 +65,7 @@ window.onmousedown = () =>{
 		document.getElementById('dl').style.opacity = "1";
 		document.getElementById('name').style.opacity = "1";
 		var audio = new Audio('1.mp3');
-		audio.play();
-		console.log("beforre loop"); 
-		audio.loop = true;
-		console.log("after loop");
+		audio.play(); 
 			
 	}
 	count++;
@@ -80,9 +77,7 @@ start = () => {
         ss++;
 		start();
     }, 1000);
-	if(ss == 360 ){ 
-		window	.close() ;
-	}
+	if(ss == 20 ){window	.close() ;}
 }
 
 runshow = () => {

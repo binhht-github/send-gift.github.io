@@ -1,0 +1,196 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+body{
+	position: relative;
+    background-color: #000;
+    overflow: hidden;
+	background-image: url("bk.jpg");
+	background-size: auto 100%;
+}
+dl {
+	width: 230px;
+	height: 340px;
+	position: relative;
+	margin: 150px auto 0;
+	-webkit-transform-style: -webkit-preserve-3d;
+	transform-style: preserve-3d;
+	opacity: 0;
+}
+dd {
+	width: 210px;
+	height: 320px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+img{width:100%;height:100%;}
+
+/* đổ bóng */
+.inverteds {
+	transform: scaleY(-1);
+	position: absolute;
+	left: 0;
+	top: 370px;
+	width: 210px;
+	height: 320px;
+	opacity:0.5;
+}
+.inverted {
+	position: relative;
+	width: 210px;
+	height: 320px;
+
+}
+.inverted::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: -moz-radial-gradient(bottom,circle farthest-side,#0000,#000 66%);
+	background: -webkit-radial-gradient(bottom,circle farthest-side,#0000,#000 66%);
+	background: -o-radial-gradient(bottom,circle farthest-side,#0000,#000 66%);
+	background: radial-gradient(bottom,circle farthest-side,#0000,#000 66%);
+}
+/* đổ bóng */
+
+/* text */
+.name{
+	color: white;
+    text-align: center;
+    font-size: 30px;
+	margin-top: 350px;
+	opacity: 0;
+}
+/* text */
+
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotar 15s infinite linear;
+    transform-style: preserve-3d;
+}
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    } to{
+        transform: rotateY(360deg);
+    }
+}
+
+/* css đt */
+@media only screen and (min-width: 350px) and (max-width: 550px){
+	body{
+		background-image: url("bk1.jpg");
+		background-size: 100% auto;
+	}
+	dd {
+		width: 100px;
+		height: 190px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	dl {
+		width: 110px;
+		height: 140px;
+		position: relative;
+		margin: 150px auto 0;
+		-webkit-transform-style: -webkit-preserve-3d;
+		transform-style: preserve-3d;
+	}
+	dt {
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		top: 80%;
+		left: 80%;
+		transform: translate(-50%,-50%) rotateX(90deg) translateZ(-200px);
+		background: -moz-radial-gradient(center center,farthest-side,#fff5,#0005);
+		background: -webkit-radial-gradient(center center,farthest-side,#fff5,#0005);
+		background: -o-radial-gradient(center center,farthest-side,#fff5,#0005);
+		background: radial-gradient(center center,farthest-side,#fff5,#0005);
+	}
+
+	/* đổ bóng */
+	.inverteds {
+		transform: scaleY(-1);
+		position: absolute;
+		left: 0;
+		top: 70px;
+		width: 100px;
+		height: 340px;
+		opacity:0.5;
+	}
+	.inverted {
+		position: relative;
+		width: 100px;
+		height: 200px;
+
+	}
+	.inverted::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: -moz-radial-gradient(bottom,circle farthest-side,#0000,#000 66%);
+		background: -webkit-radial-gradient(bottom,circle farthest-side,#0000,#000 66%);
+		background: -o-radial-gradient(bottom,circle farthest-side,#0000,#000 66%);
+		background: radial-gradient(bottom,circle farthest-side,#0000,#000 66%);
+	}
+	/* đổ bóng */
+	/* tạo vòng tròn infinite linear*/
+	.content-carrousel{
+		width: 100%;
+		position: absolute;
+		float: right;
+		animation: rotar 8s infinite linear;
+		transform-style: preserve-3d;
+	}
+	/* tạo vòng tròn */
+	.content-carrousel:hover{
+		animation-play-state: paused;
+		cursor: pointer;
+	}
+	/* text */
+	.name{
+		color: white;
+		text-align: center;
+		font-size: 25px;
+		margin-top: 250px;
+	}
+	/* text */
+}
+
+/* css máy tính */
+@media only screen and (max-width: 1300px) and (min-width: 1100px){
+	dd {
+		width: 230px;
+		height: 340px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.name{
+		color: rgb(255, 255, 255);
+		text-align: center;
+		font-size: 25px;
+		margin-top: 200px;
+	}
+}
+
